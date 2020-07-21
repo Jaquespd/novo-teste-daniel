@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+	--dark-color-a: #991a1d;
+	--dark-color-b: #991a1c2c;
+	--light-color: #fbd8d981;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--light-color);
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+span {
+  font-size: 12px;
+  color: rgb(139, 134, 134);
+}
+
+img{
+  width: 280px;
+	height: 180px;
+	margin-left: 560px;
+	margin-top: 50px;
+
+}
+
+/* Join Page */
+
+.join-container {
+	max-width: 400px;
+	margin: 200px auto;
+	color: #f5f5f5;
+}
+
+
+
+
+
+
+
+
+
+
+

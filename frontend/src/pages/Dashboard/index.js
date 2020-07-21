@@ -1,11 +1,11 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import './styles.css';
+
+import Geral from '../../components/Geral';
 
 function Dashboard() {
-  return (
-    <h1>Dashboard</h1>
-  );
+  return <Geral />;
 }
 
 export default Dashboard;
