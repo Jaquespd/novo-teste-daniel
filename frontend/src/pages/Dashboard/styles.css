@@ -7,9 +7,10 @@
 }
 
 * {
-	box-sizing: border-box;
 	margin: 0;
-	padding: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,17 +36,27 @@ span {
 img{
   width: 280px;
 	height: 180px;
-	margin-left: 560px;
+	margin-left: 70px;
 	margin-top: 50px;
 
 }
 
-/* Join Page */
+input {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+	border: 0;
+}
 
-.join-container {
-	max-width: 400px;
-	margin: 200px auto;
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: var(--light-color);
 	color: #f5f5f5;
+	border: 0;
+	border-radius: 4px;
+	font-size: 17px;
 }
 
 
