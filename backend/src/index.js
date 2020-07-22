@@ -13,10 +13,15 @@ const io = socketio(server);
 
 
 io.on('connection', (socket) => {
-  console.log("Connected to WS server");
+  console.log("WS Server - Connected");
+
+  socket.on('join', ({ name, room }) => {
+    console.log('User:', name);
+    console.log('Room:', room);
+  });
 
   socket.on('disconnect', () => {
-    console.log("disconnected");
+    console.log("WS Server - Disconnected");
   })
 });
 
