@@ -16,8 +16,7 @@ io.on('connection', (socket) => {
   console.log("WS Server - Connected");
 
   socket.on('join', ({ name, room }) => {
-    console.log('User:', name);
-    console.log('Room:', room);
+    console.log(name, room);
   });
 
   socket.on('disconnect', () => {
