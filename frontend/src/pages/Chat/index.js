@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import queryString from 'query-string';
+import io from 'socket.io-client';
 
 import { Container, Header, Main, Sidebar, Chating, Message, Form, Input } from './styles';
 
-function Chat() {
+const Chat = ({location}) => {
+useEffect(() => {
+  const { name, room } = queryString.parse(location.search);
+
+  console.log(name, room);
+});
+
+
   return (
     <Container>
       <Header>
