@@ -9,6 +9,8 @@ let socket;
 const Chat = ({ location }) => {
   const [name, setName] =  useState('');
   const [room, setRoom] =  useState('');
+  const [message, setMessage] =  useState('');
+  const [messages, setMessages] =  useState([]);
   const ENDPOINT = 'localhost:3333';
 
   useEffect(() => {
@@ -28,6 +30,22 @@ const Chat = ({ location }) => {
       socket.off();
     }
   } ,[ENDPOINT, location.search]);
+
+  useEffect(() => {
+    socket.on('message', (message) => {
+      setMessages([...messages, message]);
+    })
+  },[messages]);
+
+  const sendMessage = (event) => {
+    event.preventDefault();
+
+    if(message) {
+      socket.emit('sendMessage', message, () => setMessage(''));
+    }
+  }
+
+  console.log(message, messages);
 
 
   return (
@@ -66,11 +84,9 @@ const Chat = ({ location }) => {
       <Form>
         <form id="chat-form">
           <input
-            id="msg"
-            type="text"
-            placeholder="Enter Message"
-            required
-            autocomplete="off"
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+            onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
           />
           <button class="btn"> Send</button>
         </form>
