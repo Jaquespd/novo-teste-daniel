@@ -11,7 +11,7 @@ export default styled.button`
   border-radius: 2px;
   font-size: 17px;
   font-weight: bolder;
-  margin-top: 10px;
+  margin-top: 14px;
   
   cursor: pointer;
 `;

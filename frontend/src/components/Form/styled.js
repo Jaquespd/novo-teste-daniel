@@ -8,18 +8,20 @@ export const Container = styled.div`
 export const Input = styled.div`
   display:flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   
   > label {
     padding-bottom: 5px;
+    color: #666;
+    font-family: sans-serif;
     
   }
 
   > input {
     display: flex;
-    font-size: 16px;
+    font-size: 14px;
+    height: 40px;
 	  padding: 5px;
-	  height: 40px;
     width: 100%;
     border: 0;
     border-radius: 2px;

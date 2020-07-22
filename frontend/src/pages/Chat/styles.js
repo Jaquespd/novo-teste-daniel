@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #fff;
-  margin: -20px;  
+  background: #fff;  
 `;
 
 export const Header = styled.div`
   background: var(--dark-color-a);
 	color: #fff;
-	padding: 15px;
+	padding: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
