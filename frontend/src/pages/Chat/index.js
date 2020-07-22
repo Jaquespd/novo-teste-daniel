@@ -2,14 +2,29 @@ import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 
-import { Container, Header, Main, Sidebar, Chating, Message, Form, Input } from './styles';
+import { Container, Header, Main, Sidebar, Chating, Message, Form } from './styles';
 
-const Chat = ({location}) => {
+let socket;
+
+const Chat = ({ location }) => {
+  const [name, setName] =  useState('');
+  const [room, setRoom] =  useState('');
+  const ENDPOINT = 'localhost:3333';
+
 useEffect(() => {
   const { name, room } = queryString.parse(location.search);
 
-  console.log(name, room);
-});
+  socket = io(ENDPOINT);
+
+  setName(name);
+  setRoom(room);
+
+  console.log(socket);
+
+  socket.emit('join', { name, room });
+}
+,[ENDPOINT, location.search]
+);
 
 
   return (

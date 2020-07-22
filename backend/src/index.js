@@ -1,6 +1,7 @@
+const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
-const http = require('http');
+const cors = require('cors');
 
 const PORT = process.env.PORT || 3333;
 
@@ -10,6 +11,16 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(router);
 
-app.listen(PORT, () => console.log('🚀 Back-end started!')); 
+io.on('connection', (socket) => {
+  console.log("Connected to WS server");
+
+  socket.on('disconnect', () => {
+    console.log("disconnected");
+  })
+});
+
+app.use(router);
+app.use(cors());
+
+server.listen(PORT, () => console.log('🚀 Back-end started!')); 
