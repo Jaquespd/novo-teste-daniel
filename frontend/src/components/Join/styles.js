@@ -28,3 +28,34 @@ export const Main = styled.div`
 }
 `;
 
+export const Imput = styled.div`
+> input{
+  border-radius: 4px;
+  border: 0;
+  padding: 15px 20px;
+  width: 90%;
+  outline: none;
+  margin-top: 16px;
+}
+
+> label{
+  background:green;
+  margin-top: 10px;
+}
+`;
+
+export const Buttom = styled.div`
+  color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #0376f5;
+    padding: 16px;
+    border-radius: 4px;
+    display: inline-block;
+    border: none;
+    width: 90%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+`;
+

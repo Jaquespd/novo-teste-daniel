@@ -6,6 +6,7 @@ const Input = ({ setMessage, sendMessage, message }) => (
   <Container>
     <input
       className="input"
+      autofocus="true"
       type="text"
       placeholder="Type a message..."
       value={message}

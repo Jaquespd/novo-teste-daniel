@@ -1,11 +1,13 @@
 import styled from 'styled-components';
+import background from '../../assets/shape.png';
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fff
+  background: url(${background}) no-repeat top;
+
 `;
 
 export const Main = styled.div`

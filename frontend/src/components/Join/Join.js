@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../assets/logo.png';
 import { Link } from "react-router-dom";
 
-import { Container, Main } from './styles';
+import { Container, Main, Imput, Buttom } from './styles';
 
 import './Join.css';
 
@@ -15,14 +15,14 @@ export default function SignIn() {
       <img src={logo} alt="Swiftfox logo" /> 
       <Main>
         <h1>Swiftfox Chat</h1>
-        <div>
-          <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
-        </div>
-        <div>
-          <input placeholder="Room" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
-        </div>
+        <Imput>
+          <input placeholder="Name" autofocus="true" type="text" onChange={(event) => setName(event.target.value)} />
+        </Imput>
+        <Imput>
+          <input placeholder="Room" type="text" onChange={(event) => setRoom(event.target.value)} />
+        </Imput>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-          <button className={'button mt-20'} type="submit">Sign In</button>
+          <Buttom type="submit">Sign In</Buttom>
         </Link>
       </Main>
     </Container>

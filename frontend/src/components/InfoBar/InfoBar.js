@@ -1,5 +1,6 @@
 import React from 'react';
 
+import LogoutIcon from '../../assets/logout.png';
 import {Container, Room, Buttom } from './styles';
 
 const InfoBar = ({ room }) => (
@@ -8,7 +9,7 @@ const InfoBar = ({ room }) => (
       <h3>{room}</h3>
     </Room>
     <Buttom>
-      <a href="/">s</a>
+      <a href="/"><img src={LogoutIcon} alt="Swiftfox logo"/></a>
     </Buttom>
   </Container>
 );

@@ -30,6 +30,14 @@ export const Buttom = styled.button`
 
   > a {
     text-decoration: none;
+
+    > img {
+      height: 15px;
+      width: 15px;
+      opacity: 0.7;
+      margin-top: 7px;
+      margin-left: 2px;
+    }
   }
 
   

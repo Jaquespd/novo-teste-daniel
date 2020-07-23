@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Message.css';
+import { ContainerSend, MessageBoxSend, ContainerRecive, MessageBoxRecive } from './styles';
 
 const Message = ({ message: { text, user }, name }) => {
   let isSentByCurrentUser = false;
@@ -14,20 +14,20 @@ const Message = ({ message: { text, user }, name }) => {
   return (
     isSentByCurrentUser
       ? (
-        <div className="messageContainer justifyEnd">
-          <p className="sentText pr-10">{trimmedName}</p>
-          <div className="messageBox backgroundBlue">
-            <p className="messageText colorWhite">{(text)}</p>
-          </div>
-        </div>
+        <ContainerSend>
+          <p>{trimmedName}</p>
+          <MessageBoxSend>
+            <p>{(text)}</p>
+          </MessageBoxSend>
+        </ContainerSend>
         )
         : (
-          <div className="messageContainer justifyStart">
-            <div className="messageBox backgroundLight">
-              <p className="messageText colorDark">{(text)}</p>
-            </div>
-            <p className="sentText pl-10 ">{user}</p>
-          </div>
+          <ContainerRecive>
+            <MessageBoxRecive>
+              <p>{(text)}</p>
+            </MessageBoxRecive>
+            <p>{user}</p>
+          </ContainerRecive>
         )
   );
 }
