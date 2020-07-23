@@ -2,7 +2,7 @@
   background: #F3F3F3;
   border-radius: 8px;
   padding: 5px 20px;
-  color: white;
+  color: rgb(68, 62, 62);
   display: inline-block;
   max-width: 80%;
   margin-bottom: 12px;
@@ -21,7 +21,6 @@
 }
 
 .messageContainer {
-  
   display: flex;
   justify-content: flex-end;
   padding: 0 5%;
@@ -32,7 +31,7 @@
   display: flex;
   align-items: center;
   font-family: Helvetica;
-  color: #828282;
+  color: #000000;
   letter-spacing: 0.3px;
 }
 
@@ -53,7 +52,7 @@
 }
 
 .colorWhite {
-  color: rgb(29, 27, 27);
+  color: rgb(31, 28, 28);
 }
 
 .colorDark {
@@ -61,7 +60,7 @@
 }
 
 .backgroundBlue {
-  background: #991a1c2c;
+  background: #991a1c46;
 }
 
 .backgroundLight {

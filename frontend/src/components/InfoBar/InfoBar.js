@@ -1,16 +1,16 @@
 import React from 'react';
 
-import './InfoBar.css';
+import {Container, Room, Buttom } from './styles';
 
 const InfoBar = ({ room }) => (
-  <div className="infoBar">
-    <div className="leftInnerContainer">
+  <Container>
+    <Room>
       <h3>{room}</h3>
-    </div>
-    <div className="rightInnerContainer">
-      <a href="/"><button>Logout</button></a>
-    </div>
-  </div>
+    </Room>
+    <Buttom>
+      <a href="/">s</a>
+    </Buttom>
+  </Container>
 );
 
 export default InfoBar;

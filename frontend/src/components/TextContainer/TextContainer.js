@@ -1,35 +1,43 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
 
-import isi from '../../assets/user.png';
+import userIcon from '../../assets/user.png';
+import chatIcon from '../../assets/chat.png';
 
-import './TextContainer.css';
+import { Container, Header, Room, Users, ActiveContainer, ActiveItem } from './styles';
 
 const TextContainer = ({ users }) => (
-  <div className="textContainer">
-    <div className="test">
-    <img src={logo} alt="Swiftfox logo" /> 
-      <h1>Swiftfox Chat</h1>
-    </div>
+  <Container>
+    <Header>
+      <img src={logo} alt="Swiftfox logo" /> 
+      <h1>Swiftfox Chat</h1>`
+    </Header>
+    <Room>
+      <img src={chatIcon} alt="Bollons" />
+      <h1>Room Name:</h1>
+    </Room >
+    <h2>Financeiro</h2>
     {
       users
-        ? (
-          <div className="test2">
-            <h1><img src={isi} alt="Swiftfox logo" /> Users</h1>
-            <div className="activeContainer">
-              <h2>
-                {users.map(({name}) => (
-                  <div key={name} className="activeItem">
-                    {name}
-                  </div>
-                ))}
-              </h2>
-            </div>
-          </div>
+        ? (<>
+            <Users>
+              <img src={userIcon} alt="Swiftfox logo"/>
+              <h1> Users</h1>
+            </Users>
+            <ActiveContainer>
+            <h2>
+              {users.map(({name}) => (
+                <ActiveItem key={name}>
+                  {name}
+                </ActiveItem>
+              ))}
+            </h2>
+          </ActiveContainer>
+          </>
         )
       : null
     } 
-  </div>
+  </Container>
 );
 
 export default TextContainer;

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import logo from '../../assets/logo.png';
 import { Link } from "react-router-dom";
 
+import { Container, Main } from './styles';
+
 import './Join.css';
 
 export default function SignIn() {
@@ -9,10 +11,10 @@ export default function SignIn() {
   const [room, setRoom] = useState('');
 
   return (
-    <div className="joinOuterContainer">
+    <Container>
       <img src={logo} alt="Swiftfox logo" /> 
-      <div className="joinInnerContainer">
-        <h1 className="heading">Swiftfox Chat</h1>
+      <Main>
+        <h1>Swiftfox Chat</h1>
         <div>
           <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
         </div>
@@ -22,7 +24,7 @@ export default function SignIn() {
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
           <button className={'button mt-20'} type="submit">Sign In</button>
         </Link>
-      </div>
-    </div>
+      </Main>
+    </Container>
   );
 }

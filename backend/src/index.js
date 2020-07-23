@@ -3,9 +3,14 @@ const express = require('express');
 const socketio = require('socket.io');
 const cors = require('cors');
 
-const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
+const { 
+  addUser,
+  removeUser,
+  getUser,
+  getUsersInRoom 
+} = require('./Controller/usersController');
 
-const router = require('./router');
+const router = require('./router.js');
 
 const app = express();
 const server = http.createServer(app);
@@ -14,7 +19,7 @@ const io = socketio(server);
 app.use(cors());
 app.use(router);
 
-io.on('connect', (socket) => {
+io.on('connection', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
     const { error, user } = addUser({ id: socket.id, name, room });
 
@@ -22,7 +27,7 @@ io.on('connect', (socket) => {
 
     socket.join(user.room);
 
-    socket.emit('message', { user: 'Swiftfox Team', text: `Hello ${user.name}, welcome to the room ${user.room}`});
+    socket.emit('message', { user: 'Swiftfox Team', text: `Hello ${user.name}, welcome to the chat!`});
     socket.broadcast.to(user.room).emit('message', { user: 'Swiftfox Team', text: `${user.name} has joined!` });
 
     io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
@@ -48,4 +53,4 @@ io.on('connect', (socket) => {
   })
 });
 
-server.listen(process.env.PORT || 3333, () => console.log('🚀 Back-end started!'));
+server.listen(3333);

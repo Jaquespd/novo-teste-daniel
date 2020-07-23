@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './Input.css';
+import { Container, Button } from './styled';
 
 const Input = ({ setMessage, sendMessage, message }) => (
-  <form className="form">
+  <Container>
     <input
       className="input"
       type="text"
@@ -12,8 +12,11 @@ const Input = ({ setMessage, sendMessage, message }) => (
       onChange={({ target: { value } }) => setMessage(value)}
       onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
     />
-    <button className="sendButton" onClick={e => sendMessage(e)}>Send</button>
-  </form>
+    <Button  
+      onClick={e => sendMessage(e)}>
+      Send
+    </Button>
+  </Container>
 )
 
 export default Input;

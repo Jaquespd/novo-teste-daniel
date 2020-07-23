@@ -1,0 +1,36 @@
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #991a1d;
+  border-radius: 4px 4px 0 0;
+  height: 60px;
+  width: 100%;
+`;
+
+export const Room = styled.div`
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  margin-left: 3%;
+  color: white;
+`;
+
+export const Buttom = styled.button`
+  display: flex;
+  margin-right: 3%;
+  text-decoration: none;
+  background: #FFF;
+  border: 0;
+  border-radius: 50%;
+  width: 30px;
+  height:30px;
+
+  > a {
+    text-decoration: none;
+  }
+
+  
+`;
