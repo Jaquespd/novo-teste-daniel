@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 import { Container, Main, Imput, Buttom } from './styles';
 
-import './Join.css';
-
 export default function SignIn() {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
