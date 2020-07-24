@@ -8,6 +8,15 @@ export const Container = styled.div`
   border-radius: 4px 4px 0 0;
   height: 60px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    border-radius: 0;
+  }
+
+  @media (max-width: 425px) {
+      margin-top: -10px;
+    }
+
 `;
 
 export const Room = styled.div`
@@ -39,6 +48,4 @@ export const Buttom = styled.button`
       margin-left: 2px;
     }
   }
-
-  
 `;

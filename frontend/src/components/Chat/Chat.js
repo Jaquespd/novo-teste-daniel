@@ -56,11 +56,10 @@ const Chat = ({ location }) => {
     <Container>
       <TextContainer users={users}/>
       <Main>
-          <InfoBar room={room} />
-          <Messages messages={messages} name={name} />
-          <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+        <InfoBar room={room} />
+        <Messages messages={messages} name={name} />
+        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
       </Main>
-      
     </Container>
   );
 }

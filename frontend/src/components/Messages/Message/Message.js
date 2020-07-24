@@ -14,14 +14,15 @@ const Message = ({ message: { text, user }, name }) => {
   return (
     isSentByCurrentUser
       ? (
-        <ContainerSend>
-          <p>{trimmedName}</p>
-          <MessageBoxSend>
-            <p>{(text)}</p>
-          </MessageBoxSend>
-        </ContainerSend>
+          <ContainerSend>
+            <p>{trimmedName}</p>
+            <MessageBoxSend>
+              <p>{(text)}</p>
+            </MessageBoxSend>
+          </ContainerSend>
         )
-        : (
+        : 
+        (
           <ContainerRecive>
             <MessageBoxRecive>
               <p>{(text)}</p>

@@ -7,13 +7,13 @@ export const ContainerSend = styled.div`
   justify-content: flex-end;
   
   > p {
-  display: flex;
-  align-items: center;
-  font-family: Helvetica;
-  color: #616362;
-  letter-spacing: 0.3px;
-  padding-right: 10px;
-}
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    color: #616362;
+    letter-spacing: 0.3px;
+    padding-right: 10px;
+  }
 `;
 
 export const MessageBoxSend = styled.div`
@@ -27,13 +27,13 @@ export const MessageBoxSend = styled.div`
   box-shadow:8px 8px 8px rgba(0,0,0,0.1);
 
   > p {
-  width: 100%;
-  letter-spacing: 0;
-  float: left;
-  font-size: 1.1em;
-  word-wrap: break-word;
-  padding-right: 10px;
-}
+    width: 100%;
+    letter-spacing: 0;
+    float: left;
+    font-size: 1.1em;
+    word-wrap: break-word;
+    padding-right: 10px;
+  }
 `;
 
 export const ContainerRecive = styled.div`
@@ -43,13 +43,13 @@ export const ContainerRecive = styled.div`
   margin-top: 3px;
   
   > p {
-  display: flex;
-  align-items: center;
-  font-family: Helvetica;
-  color: #616362;
-  letter-spacing: 0.3px;
-  padding-left: 10px;
-}
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    color: #616362;
+    letter-spacing: 0.3px;
+    padding-left: 10px;
+  }
 `;
 
 export const MessageBoxRecive = styled.div`
@@ -63,11 +63,11 @@ export const MessageBoxRecive = styled.div`
   box-shadow:8px 8px 8px rgba(0,0,0,0.1);
 
   > p {
-  width: 100%;
-  letter-spacing: 0;
-  float: left;
-  font-size: 1.1em;
-  word-wrap: break-word;
-  padding-right: 10px;
-}
+    width: 100%;
+    letter-spacing: 0;
+    float: left;
+    font-size: 1.1em;
+    word-wrap: break-word;
+    padding-right: 10px;
+  }
 `;

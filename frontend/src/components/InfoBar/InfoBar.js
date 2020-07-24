@@ -5,8 +5,8 @@ import {Container, Room, Buttom } from './styles';
 
 const InfoBar = ({ room }) => (
   <Container>
-    <Room>
-      <h3>{room}</h3>
+    <Room> 
+      <h3>{room}</h3> 
     </Room>
     <Buttom>
       <a href="/"><img src={LogoutIcon} alt="Swiftfox logo"/></a>

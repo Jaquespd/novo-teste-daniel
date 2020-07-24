@@ -16,10 +16,19 @@ export default function SignIn() {
       <Main>
         <h1>Swiftfox Chat</h1>
         <Imput>
-          <input placeholder="Name" autofocus="true" type="text" onChange={(event) => setName(event.target.value)} />
+          <input 
+            placeholder="Name" 
+            autofocus="true" 
+            type="text" 
+            onChange={(event) => setName(event.target.value)} 
+          />
         </Imput>
         <Imput>
-          <input placeholder="Room" type="text" onChange={(event) => setRoom(event.target.value)} />
+          <input 
+            placeholder="Room" 
+            type="text" 
+            onChange={(event) => setRoom(event.target.value)} 
+          />
         </Imput>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
           <Buttom type="submit">Sign In</Buttom>
