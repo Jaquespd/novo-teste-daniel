@@ -10,13 +10,13 @@ const TextContainer = ({ users }) => (
   <Container>
     <Header>
       <img src={logo} alt="Swiftfox logo" /> 
-      <h1>Swiftfox Chat</h1>`
+      <h1>Swiftfox Chat</h1>
     </Header>
     <Room>
       <img src={chatIcon} alt="Bollons" />
       <h1>Room Name:</h1>
     </Room >
-    <h2>Financeiro</h2>
+    <h2>{users && users[0].room}</h2>
     {
       users
         ? (<>

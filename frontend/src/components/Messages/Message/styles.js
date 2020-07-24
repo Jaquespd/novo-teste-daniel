@@ -17,13 +17,14 @@ export const ContainerSend = styled.div`
 `;
 
 export const MessageBoxSend = styled.div`
-  background: #cddce3;
+  background: #e5efc3;
   border-radius: 8px;
   padding: 5px 20px;
   color: #111;
   display: inline-block;
   max-width: 80%;
   margin-bottom: 12px;
+  box-shadow:8px 8px 8px rgba(0,0,0,0.1);
 
   > p {
   width: 100%;
@@ -59,6 +60,7 @@ export const MessageBoxRecive = styled.div`
   display: inline-block;
   max-width: 80%;
   margin-bottom: 12px;
+  box-shadow:8px 8px 8px rgba(0,0,0,0.1);
 
   > p {
   width: 100%;

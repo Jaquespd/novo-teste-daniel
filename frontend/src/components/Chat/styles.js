@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import background from '../../assets/shape.png';
+import background from '../../assets/Untitled.png';
 
 export const Container = styled.div`
   display: flex;
@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   height: 100vh;
   background: url(${background}) no-repeat top;
+
 
 `;
 
@@ -18,6 +19,7 @@ export const Main = styled.div`
   border-radius: 4px 4px 4px 4px ;
   height: 60%;
   width: 35%;
+  box-shadow: -40px 40px 30px rgba(0, 0, 0, 0.2);
 
   @media (min-width: 320px) and (max-width: 480px) {
   .outerContainer {

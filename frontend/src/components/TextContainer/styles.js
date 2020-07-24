@@ -14,13 +14,13 @@ export const Header = styled.div`
   display: flex;
 
   > h1 {
-  margin-top: -25px;
-  margin-left: -30px;
+  margin-top: -65px;
+  margin-left: -50px;
 }
 
   > img {
-  height: 130px;
-  width: 190px;
+  height: 160px;
+  width: 250px;
 }
 `;
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 import background from '../../assets/background.png';
 
@@ -16,6 +17,7 @@ export const Main = styled.div`
   width: 25%;
   background-color: #00000023;
   border-radius: 8px;
+  box-shadow: 20px 30px 30px rgba(0,0,0,0.4);
 
   > h1 {
   color: rgb(255, 255, 255);
@@ -52,10 +54,16 @@ export const Buttom = styled.div`
     padding: 16px;
     border-radius: 4px;
     display: inline-block;
+    outline: none;
     border: none;
     width: 90%;
     margin-bottom: 20px;
     margin-top: 20px;
     font-weight: bold;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background: ${shade(0.2, '#0376f5')};
+    }
 `;
 
