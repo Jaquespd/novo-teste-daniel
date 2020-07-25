@@ -10,12 +10,45 @@ export const Container = styled.div`
   text-align: center;
   height: 100vh;
   align-items: center;
-  background: url(${background}) no-repeat bottom;
+  background: url(${background}) no-repeat top;
+  background-size: cover;
 
   > img {
     width: 280px;
     height: 180px;
     margin-top: -130px;
+  }
+
+  @media (max-width: 2560px) {
+    img {
+      width: 350px;
+      height: 250px;
+      margin-top: -300px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    img {
+      width: 290px;
+      height: 200px;
+      margin-top: -200px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    img {
+      width: 250px;
+      height: 170px;
+      margin-top: -100px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 230px;
+      height: 150px;
+      margin-top: -130px;
+    }
   }
 
   @media (max-width: 426px) {
@@ -50,16 +83,40 @@ export const Main = styled.div`
     border-radius: 8px 8px 0 0;
   }
 
+  @media (max-width: 2560px) {
+    width: 17%;
+    height:20%;
+  }
+
+  @media (max-width: 1440px) {
+    width: 27%;
+    height:35%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 25%;
+    height:43%;
+  }
+
   @media (max-width: 1025px) {
     width: 35%;
   }
 
-  @media (max-width: 769px) {
+  @media (max-width: 768px) {
     width: 45%;
   }
 
   @media (max-width: 426px) {
     width: 70%;
+  }
+
+  @media (max-width: 320px) {
+    width: 80%;
+    height: 40%;
+    
+    h1 {
+      font-size: 25px;
+    }
   }
 `;
 

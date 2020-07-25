@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   height: 100vh;
   background: url(${background}) no-repeat top;
-
+  background-size: cover;
 
   @media (max-width: 425px) {
     background: url(${shape}) no-repeat bottom;
@@ -25,24 +25,35 @@ export const Main = styled.div`
   width: 35%;
   box-shadow: -40px 40px 30px rgba(0, 0, 0, 0.2);
 
-  @media (max-width: 1025px) {
+  /* @media (max-width: 2560px) {
     margin-right: -70px;
-    width: 45%;
-    height: 50%;
+    width: 30%;
+    height: 60%;
+  } */
+
+  @media (max-width: 1440px) {
+    margin-right: -90px;
+  }
+
+  @media (max-width: 1024px) {
+    margin-right: -70px;
+    width: 40%;
+    height: 61%;
   }
 
   @media (max-width: 768px) {
-    margin-left: -380px;
+    margin-left: -365px;
     width: 53%;
-    height: 53%;
-    margin-top: 20px;
+    height: 60%;
+    margin-top: 80px;
   }
 
   @media (max-width: 425px) {
     width: 100%;
-    height: 98%;
+    height: 100%;
     box-shadow: none;
     margin-top: 0;
+    margin-right: -55px;
   }
 
   @media (max-width: 375px) {

@@ -25,7 +25,17 @@ export const Container = styled.div`
       border-radius: 30px 0 0 30px ;
       margin-left: 10px;
     }
+
+    /* @media (max-width: 2560px) {
+      font-size: 25px;
+      height: 85px;
+      margin-top:-30px;
+    } */
   }
+
+  /* @media (max-width: 2560px) {
+      border-top: none;
+    } */
   
   @media (max-width: 425px) {
     margin-bottom: 10px;
@@ -51,6 +61,12 @@ export const Button = styled.div`
   &:hover {
     background: ${shade(0.2, '#991a1d')};
   }
+
+  /* @media (max-width: 2560px) {
+    font-size: 25px;
+    height: 85px;
+    margin-top:-30px;
+  } */
 
   @media (max-width: 425px) {
     border-radius: 0px 30px 30px 0px ;

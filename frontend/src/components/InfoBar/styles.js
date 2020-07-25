@@ -9,14 +9,14 @@ export const Container = styled.div`
   height: 60px;
   width: 100%;
 
-  @media (max-width: 768px) {
-    border-radius: 0;
-  }
+  /* @media (max-width: 2560px) {
+    height: 100px;
+    font-size: 25px;
+  } */
 
   @media (max-width: 425px) {
-      margin-top: -10px;
+    border-radius: 0;
     }
-
 `;
 
 export const Room = styled.div`
