@@ -1,18 +1,18 @@
 import React from 'react';
 
-import Chat from '../src/Pages/Chat/Chat';
-import Login from '../src/Pages/Login/Login';
+import Chat from '../src/Pages/Chat';
+import Login from '../src/Pages/Login';
 import GlobalStyles from './styles/Global';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Route path="/" exact component={Login} />
       <Route path="/chat" component={Chat} />
       <GlobalStyles/>
-    </Router>
+    </BrowserRouter>
   );
 }
 

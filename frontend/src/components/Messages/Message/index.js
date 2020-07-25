@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ContainerSend, MessageBoxSend, ContainerRecive, MessageBoxRecive } from './styles';
 
-const Message = ({ message: { text, user }, name }) => {
+export default function Message({ message: { text, user }, name }) {
   let isSentByCurrentUser = false;
 
   const trimmedName = name.trim().toLowerCase();
@@ -30,7 +30,5 @@ const Message = ({ message: { text, user }, name }) => {
             <p>{user}</p>
           </ContainerRecive>
         )
-  );
-}
-
-export default Message;
+  )
+};

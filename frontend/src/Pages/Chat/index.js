@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import queryString from 'query-string';
 import io from "socket.io-client";
 
-import TextContainer from '../../components/TextContainer/TextContainer';
-import Messages from '../../components/Messages/Messages';
-import InfoBar from '../../components/InfoBar/InfoBar';
-import Input from '../../components/Input/Input';
+import TextContainer from '../../components/TextContainer';
+import Messages from '../../components/Messages';
+import InfoBar from '../../components/InfoBar';
+import Input from '../../components/Input';
 
 import {Container, Main } from './styles';
 
 let socket;
 
-const Chat = ({ location }) => {
+export default function Chat({ location }) {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   const [users, setUsers] = useState('');
@@ -42,7 +42,7 @@ const Chat = ({ location }) => {
     socket.on("roomData", ({ users }) => {
       setUsers(users);
     });
-}, []);
+  }, []);
 
   const sendMessage = (event) => {
     event.preventDefault();
@@ -63,5 +63,3 @@ const Chat = ({ location }) => {
     </Container>
   );
 }
-
-export default Chat;
