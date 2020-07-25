@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="oBarber Logo" src="https://github.com/Daniel-Simoes/WebSocket-Chat/blob/master/socket-chat.jpg" />
+    <img alt="Logo" src="https://github.com/Daniel-Simoes/WebSocket-Chat/blob/master/socketchat.jpg" />
     <br>
 </h1>
 
@@ -14,7 +14,7 @@ By the end of this project I could get a strong understanding of how to send and
 ## 🖥 Apresentation
 
 <p align="center">
-  <img alt="oBarber Desktop Gif" src="https://github.com/Daniel-Simoes/WebSocket-Chat/blob/master/devaces.jpg">
+  <img alt="img" src="https://github.com/Daniel-Simoes/WebSocket-Chat/blob/master/devices.jpg">
 </p>
 
 ## :rocket: WebSocket-Chat Installation
