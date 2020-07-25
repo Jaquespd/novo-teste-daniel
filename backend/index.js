@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('http');
 const cors = require('cors');
 
-const { setupWebsocket } = require('./Services/websocket');
+const { setupWebsocket } = require('./src/Services/websocket');
 
 const router = require('./router.js');
 
