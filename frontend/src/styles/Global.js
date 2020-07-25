@@ -9,7 +9,6 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
-    background: 100%;
   }
   
 #root {
