@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
-import io from "socket.io-client";
+import io from 'socket.io-client';
 
 import TextContainer from '../../components/TextContainer';
 import Messages from '../../components/Messages';
 import InfoBar from '../../components/InfoBar';
 import Input from '../../components/Input';
 
-import {Container, Main } from './styles';
+import { Container, Main } from './styles';
 
 let socket;
 
@@ -17,7 +17,7 @@ export default function Chat({ location }) {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'localhost:3333';
+  const ENDPOINT = 'chat.natalprojetos.com.br';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -25,21 +25,21 @@ export default function Chat({ location }) {
     socket = io(ENDPOINT);
 
     setRoom(room);
-    setName(name)
+    setName(name);
 
     socket.emit('join', { name, room }, (error) => {
-      if(error) {
+      if (error) {
         alert(error);
       }
     });
   }, [ENDPOINT, location.search]);
-  
+
   useEffect(() => {
-    socket.on('message', message => {
-      setMessages(messages => [ ...messages, message ]);
+    socket.on('message', (message) => {
+      setMessages((messages) => [...messages, message]);
     });
-    
-    socket.on("roomData", ({ users }) => {
+
+    socket.on('roomData', ({ users }) => {
       setUsers(users);
     });
   }, []);
@@ -47,18 +47,22 @@ export default function Chat({ location }) {
   const sendMessage = (event) => {
     event.preventDefault();
 
-    if(message) {
+    if (message) {
       socket.emit('sendMessage', message, () => setMessage(''));
     }
-  }
+  };
 
   return (
     <Container>
-      <TextContainer users={users}/>
+      <TextContainer users={users} />
       <Main>
         <InfoBar room={room} />
         <Messages messages={messages} name={name} />
-        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+        <Input
+          message={message}
+          setMessage={setMessage}
+          sendMessage={sendMessage}
+        />
       </Main>
     </Container>
   );
