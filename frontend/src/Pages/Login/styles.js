@@ -12,18 +12,19 @@ export const Container = styled.div`
   align-items: center;
   background: url(${background}) no-repeat top;
   background-size: cover;
+  /* padding-top: 100px; */
 
   > img {
     width: 280px;
     height: 180px;
-    margin-top: -130px;
+    /* margin-top: -130px; */
   }
 
   @media (max-width: 2560px) {
     img {
       width: 350px;
       height: 250px;
-      margin-top: -300px;
+      /* margin-top: -300px; */
     }
   }
 
@@ -31,7 +32,7 @@ export const Container = styled.div`
     img {
       width: 290px;
       height: 200px;
-      margin-top: -200px;
+      /* margin-top: -200px; */
     }
   }
 
@@ -39,7 +40,7 @@ export const Container = styled.div`
     img {
       width: 250px;
       height: 170px;
-      margin-top: -100px;
+      /* margin-top: -100px; */
     }
   }
 
@@ -47,7 +48,7 @@ export const Container = styled.div`
     img {
       width: 230px;
       height: 150px;
-      margin-top: -130px;
+      /* margin-top: -130px; */
     }
   }
 
@@ -55,24 +56,27 @@ export const Container = styled.div`
     img {
       width: 230px;
       height: 150px;
-      margin-top: -130px;
+      /* margin-top: -130px; */
     }
   }
-  
+
   @media (max-width: 320px) {
     img {
       width: 200px;
       height: 130px;
-      margin-top: -130px;
+      /* margin-top: -130px; */
     }
   }
 `;
 
 export const Main = styled.div`
-  width: 25%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 320px;
   background-color: #00000023;
   border-radius: 8px;
-  box-shadow: 20px 30px 30px rgba(0,0,0,0.4);
+  box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.4);
 
   > h1 {
     color: rgb(255, 255, 255);
@@ -83,37 +87,14 @@ export const Main = styled.div`
     border-radius: 8px 8px 0 0;
   }
 
-  @media (max-width: 2560px) {
-    width: 17%;
-    height:20%;
-  }
-
-  @media (max-width: 1440px) {
-    width: 27%;
-    height:35%;
-  }
-
-  @media (max-width: 1024px) {
-    width: 25%;
-    height:43%;
-  }
-
-  @media (max-width: 1025px) {
-    width: 35%;
-  }
-
-  @media (max-width: 768px) {
-    width: 45%;
-  }
-
   @media (max-width: 426px) {
-    width: 70%;
+    width: 280px;
   }
 
   @media (max-width: 320px) {
-    width: 80%;
-    height: 40%;
-    
+    width: 250px;
+    /* height: 40%; */
+
     h1 {
       font-size: 25px;
     }
@@ -121,7 +102,6 @@ export const Main = styled.div`
 `;
 
 export const Imput = styled.div`
-
   > input {
     border-radius: 4px;
     border: 0;
@@ -132,7 +112,7 @@ export const Imput = styled.div`
   }
 
   > label {
-    background:green;
+    background: green;
     margin-top: 10px;
   }
 `;
@@ -157,4 +137,3 @@ export const Buttom = styled.div`
     background: ${shade(0.2, '#0376f5')};
   }
 `;
-
